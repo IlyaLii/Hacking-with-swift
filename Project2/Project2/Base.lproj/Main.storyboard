@@ -16,17 +16,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vs-g4-pBx">
-                                <rect key="frame" x="107" y="118" width="200" height="100"/>
+                                <rect key="frame" x="107" y="158" width="200" height="100"/>
                                 <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gs1-EM-Yjr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-JO-am6">
-                                <rect key="frame" x="107" y="248" width="200" height="100"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-JO-am6">
+                                <rect key="frame" x="107" y="288" width="200" height="100"/>
                                 <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYI-Ip-09K"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-cO-Ndb">
-                                <rect key="frame" x="107" y="378" width="200" height="100"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-cO-Ndb">
+                                <rect key="frame" x="107" y="418" width="200" height="100"/>
                                 <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqt-GM-iR0"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clJ-xH-yQq">
+                                <rect key="frame" x="182.5" y="108" width="49.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49.5" id="4Fo-yW-5jq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -34,8 +52,10 @@
                             <constraint firstItem="uv8-JO-am6" firstAttribute="top" secondItem="1Vs-g4-pBx" secondAttribute="bottom" constant="30" id="5js-IF-zYD"/>
                             <constraint firstItem="1Vs-g4-pBx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ILr-ng-Wob"/>
                             <constraint firstItem="rjH-cO-Ndb" firstAttribute="top" secondItem="uv8-JO-am6" secondAttribute="bottom" constant="30" id="NCg-oX-Fz7"/>
-                            <constraint firstItem="1Vs-g4-pBx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="SMN-bh-Afg"/>
+                            <constraint firstItem="1Vs-g4-pBx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="SMN-bh-Afg"/>
                             <constraint firstItem="uv8-JO-am6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bGA-30-lmi"/>
+                            <constraint firstItem="clJ-xH-yQq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gfk-Bn-aJy"/>
+                            <constraint firstItem="clJ-xH-yQq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z87-8O-odp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -44,6 +64,7 @@
                         <outlet property="button1" destination="1Vs-g4-pBx" id="Xor-Rv-FkM"/>
                         <outlet property="button2" destination="uv8-JO-am6" id="vsp-ym-shf"/>
                         <outlet property="button3" destination="rjH-cO-Ndb" id="fnm-AF-J0S"/>
+                        <outlet property="scoreLabel" destination="clJ-xH-yQq" id="5fX-BU-8ia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
