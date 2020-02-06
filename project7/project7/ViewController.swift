@@ -10,18 +10,27 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    var petitions = [Petition]()
+    var petitions = [Petition]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-        guard let url = URL(string: urlString) else {
-            showError()
-            return }
-        guard let data = try? Data(contentsOf: url) else {
-            showError()
-            return }
-        parse(data: data)
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let url = URL(string: urlString) else {
+                self?.showError()
+                return }
+            guard let data = try? Data(contentsOf: url) else {
+                self?.showError()
+                return }
+            self?.parse(data: data)
+        }
+        
     }
     
     func showError() {
@@ -29,14 +38,14 @@ class ViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
     func parse(data: Data) {
         let decoder = JSONDecoder()
         guard let json = try? decoder.decode(Petitions.self, from: data)
             else {
-            showError()
-            return }
+                showError()
+                return }
         petitions = json.results
-        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
