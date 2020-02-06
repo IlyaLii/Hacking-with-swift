@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
+    
     var allWords = [String]()
     var usedWords = [String]()
     
@@ -25,7 +25,7 @@ class ViewController: UITableViewController {
         }
         startGame()
     }
-
+    
     func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll()
@@ -48,6 +48,9 @@ class ViewController: UITableViewController {
     func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
+        var errorTitle: String?
+        var errorMessage: String?
+        
         if isPossible(word: lowerAnswer) {
             if isOriginal(word: lowerAnswer) {
                 if isReal(word: lowerAnswer) {
@@ -55,13 +58,29 @@ class ViewController: UITableViewController {
                     
                     let indexPath = IndexPath(row: 0, section: 0)
                     tableView.insertRows(at: [indexPath], with: .automatic)
+                    return
+                } else {
+                    errorTitle = "Word not recognised"
+                    errorMessage = "You can't just make them up, you know!"
                 }
+            } else {
+                errorTitle = "Word used already"
+                errorMessage = "Be more original!"
             }
+        } else {
+            guard let title = title?.lowercased() else { return }
+            errorTitle = "Word not possible"
+            errorMessage = "You can't spell that word from \(title)"
         }
+        
+        
+        let alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func isPossible(word: String) -> Bool {
-        
+        guard word.count > 1 else { return false }
         guard var tempWord = title?.lowercased() else { return false }
         
         for letter in word {
@@ -73,11 +92,11 @@ class ViewController: UITableViewController {
         }
         return true
     }
-
+    
     func isOriginal(word: String) -> Bool {
         return !usedWords.contains(word)
     }
-
+    
     func isReal(word: String) -> Bool {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
