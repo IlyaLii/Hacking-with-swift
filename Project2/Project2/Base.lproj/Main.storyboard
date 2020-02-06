@@ -15,23 +15,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vs-g4-pBx">
-                                <rect key="frame" x="107" y="158" width="200" height="100"/>
-                                <state key="normal" image="us"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vs-g4-pBx">
+                                <rect key="frame" x="143" y="158" width="128" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Vs-g4-pBx" secondAttribute="height" multiplier="2:1" id="hvf-2s-KaB"/>
+                                </constraints>
+                                <state key="normal" image="Belarus.png"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gs1-EM-Yjr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-JO-am6">
-                                <rect key="frame" x="107" y="288" width="200" height="100"/>
-                                <state key="normal" image="us"/>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-JO-am6">
+                                <rect key="frame" x="143" y="252" width="128" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uv8-JO-am6" secondAttribute="height" multiplier="2:1" id="o5X-i0-iU0"/>
+                                </constraints>
+                                <state key="normal" image="Belarus.png"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYI-Ip-09K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-cO-Ndb">
-                                <rect key="frame" x="107" y="418" width="200" height="100"/>
-                                <state key="normal" image="us"/>
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-cO-Ndb">
+                                <rect key="frame" x="143" y="346" width="128" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rjH-cO-Ndb" secondAttribute="height" multiplier="2:1" id="baf-j8-iJd"/>
+                                </constraints>
+                                <state key="normal" image="Belarus.png"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqt-GM-iR0"/>
                                 </connections>
@@ -50,11 +59,14 @@
                         <constraints>
                             <constraint firstItem="rjH-cO-Ndb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3eL-iS-fgj"/>
                             <constraint firstItem="uv8-JO-am6" firstAttribute="top" secondItem="1Vs-g4-pBx" secondAttribute="bottom" constant="30" id="5js-IF-zYD"/>
+                            <constraint firstItem="rjH-cO-Ndb" firstAttribute="height" secondItem="uv8-JO-am6" secondAttribute="height" id="7Hw-gH-LlL"/>
                             <constraint firstItem="1Vs-g4-pBx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ILr-ng-Wob"/>
                             <constraint firstItem="rjH-cO-Ndb" firstAttribute="top" secondItem="uv8-JO-am6" secondAttribute="bottom" constant="30" id="NCg-oX-Fz7"/>
                             <constraint firstItem="1Vs-g4-pBx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="SMN-bh-Afg"/>
                             <constraint firstItem="uv8-JO-am6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bGA-30-lmi"/>
                             <constraint firstItem="clJ-xH-yQq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gfk-Bn-aJy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rjH-cO-Ndb" secondAttribute="bottom" constant="20" id="oQd-Xe-UPG"/>
+                            <constraint firstItem="uv8-JO-am6" firstAttribute="height" secondItem="1Vs-g4-pBx" secondAttribute="height" id="tdP-pP-rbS"/>
                             <constraint firstItem="clJ-xH-yQq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z87-8O-odp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +103,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="us" width="200" height="100"/>
+        <image name="Belarus.png" width="64" height="64"/>
     </resources>
 </document>

@@ -15,16 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     
-    var countries = ["estonia", "france", "germany",
-                     "ireland", "italy", "monaco",
-                     "nigeria", "poland", "russia",
-                     "spain", "uk", "us"]
+    var countries = [String]()
     var score = 0
     var correctAnswer = 0
     var countGames = 0
     
+    func fetchImages() {
+        let fileManager = FileManager.default
+        let path = Bundle.main.resourcePath!
+        let items = try! fileManager.contentsOfDirectory(atPath: path)
+        for item in items {
+            if item.hasSuffix(".png") {
+                countries.append(item)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchImages()
         askQuestion()
         
         button1.layer.borderWidth = 1
@@ -34,6 +43,7 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
+       
     }
 
     func askQuestion() {
