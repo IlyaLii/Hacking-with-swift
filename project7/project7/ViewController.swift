@@ -9,21 +9,32 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
+    
     var petitions = [Petition]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-        guard let url = URL(string: urlString) else { return }
-        guard let data = try? Data(contentsOf: url) else { return }
+        guard let url = URL(string: urlString) else {
+            showError()
+            return }
+        guard let data = try? Data(contentsOf: url) else {
+            showError()
+            return }
         parse(data: data)
     }
-
+    
+    func showError() {
+        let alert = UIAlertController(title: "Network error", message: "Check your connection and try again", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
     func parse(data: Data) {
         let decoder = JSONDecoder()
         guard let json = try? decoder.decode(Petitions.self, from: data)
-            else { return }
+            else {
+            showError()
+            return }
         petitions = json.results
         tableView.reloadData()
     }
@@ -39,6 +50,6 @@ class ViewController: UITableViewController {
         cell.detailTextLabel?.text = petition.body
         return cell
     }
-
+    
 }
 
