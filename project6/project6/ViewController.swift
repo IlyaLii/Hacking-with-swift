@@ -5,12 +5,12 @@
 //  Created by Li on 2/6/20.
 //  Copyright © 2020 Li. All rights reserved.
 //
+ import UIKit
 
-import UIKit
+ class ViewController: UIViewController {
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+    var previous: UILabel?
+     override func viewDidLoad() {
         super.viewDidLoad()
         let label1 = addLabel(text: "Some", backgroundColor: .blue)
         let label2 = addLabel(text: "text", backgroundColor: .brown)
@@ -20,9 +20,20 @@ class ViewController: UIViewController {
         view.addSubview(label2)
         view.addSubview(label3)
         view.addSubview(label4)
+        
+        for label in [label1, label2, label3, label4] {
+            label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 50).isActive = true
+            if let previous = previous {
+                label.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 10).isActive = true
+            } else {
+                label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+            }
+            previous = label
+        }
     }
 
-    func addLabel(text: String, backgroundColor: UIColor) -> UILabel {
+     func addLabel(text: String, backgroundColor: UIColor) -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
@@ -31,5 +42,4 @@ class ViewController: UIViewController {
         return label
     }
 
-}
-
+ }
