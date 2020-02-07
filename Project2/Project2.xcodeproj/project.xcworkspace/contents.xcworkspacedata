@@ -1,7 +1,791 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:/Users/chiki-briki/Desktop/Hacking with swift/Project2/Project2/png"
+      name = "png">
+      <FileRef
+         location = "group:261-china.png">
+      </FileRef>
+      <FileRef
+         location = "group:001-ethiopia.png">
+      </FileRef>
+      <FileRef
+         location = "group:199-sicily.png">
+      </FileRef>
+      <FileRef
+         location = "group:132-cambodia.png">
+      </FileRef>
+      <FileRef
+         location = "group:022-european-union.png">
+      </FileRef>
+      <FileRef
+         location = "group:097-switzerland.png">
+      </FileRef>
+      <FileRef
+         location = "group:224-otan.png">
+      </FileRef>
+      <FileRef
+         location = "group:205-marshall-island.png">
+      </FileRef>
+      <FileRef
+         location = "group:165-sint-maarten.png">
+      </FileRef>
+      <FileRef
+         location = "group:050-romania.png">
+      </FileRef>
+      <FileRef
+         location = "group:219-yemen.png">
+      </FileRef>
+      <FileRef
+         location = "group:146-faroe-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:212-curacao.png">
+      </FileRef>
+      <FileRef
+         location = "group:064-argentina.png">
+      </FileRef>
+      <FileRef
+         location = "group:215-northen-cyprus.png">
+      </FileRef>
+      <FileRef
+         location = "group:021-mauritius.png">
+      </FileRef>
+      <FileRef
+         location = "group:027-honduras.png">
+      </FileRef>
+      <FileRef
+         location = "group:074-peru.png">
+      </FileRef>
+      <FileRef
+         location = "group:048-new-zealand.png">
+      </FileRef>
+      <FileRef
+         location = "group:110-belarus.png">
+      </FileRef>
+      <FileRef
+         location = "group:194-bahamas.png">
+      </FileRef>
+      <FileRef
+         location = "group:072-denmark.png">
+      </FileRef>
+      <FileRef
+         location = "group:184-thailand.png">
+      </FileRef>
+      <FileRef
+         location = "group:101-balearic-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:158-tokelau.png">
+      </FileRef>
+      <FileRef
+         location = "group:003-tanzania.png">
+      </FileRef>
+      <FileRef
+         location = "group:068-united-arab-emirates.png">
+      </FileRef>
+      <FileRef
+         location = "group:054-belgium.png">
+      </FileRef>
+      <FileRef
+         location = "group:208-kyrgyzstan.png">
+      </FileRef>
+      <FileRef
+         location = "group:035-serbia.png">
+      </FileRef>
+      <FileRef
+         location = "group:210-eritrea.png">
+      </FileRef>
+      <FileRef
+         location = "group:065-ukraine.png">
+      </FileRef>
+      <FileRef
+         location = "group:116-bahrain.png">
+      </FileRef>
+      <FileRef
+         location = "group:161-south-sudan.png">
+      </FileRef>
+      <FileRef
+         location = "group:114-bermuda.png">
+      </FileRef>
+      <FileRef
+         location = "group:190-vatican-city.png">
+      </FileRef>
+      <FileRef
+         location = "group:058-norway.png">
+      </FileRef>
+      <FileRef
+         location = "group:109-bonaire.png">
+      </FileRef>
+      <FileRef
+         location = "group:060-israel.png">
+      </FileRef>
+      <FileRef
+         location = "group:092-cayman-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:104-antigua-and-barbuda.png">
+      </FileRef>
+      <FileRef
+         location = "group:136-galapagos-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:197-suriname.png">
+      </FileRef>
+      <FileRef
+         location = "group:141-singapore.png">
+      </FileRef>
+      <FileRef
+         location = "group:131-costa-rica.png">
+      </FileRef>
+      <FileRef
+         location = "group:239-mexico.png">
+      </FileRef>
+      <FileRef
+         location = "group:188-virgin-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:221-sudan.png">
+      </FileRef>
+      <FileRef
+         location = "group:142-palau.png">
+      </FileRef>
+      <FileRef
+         location = "group:086-morocco.png">
+      </FileRef>
+      <FileRef
+         location = "group:195-netherlands.png">
+      </FileRef>
+      <FileRef
+         location = "group:010-nigeria.png">
+      </FileRef>
+      <FileRef
+         location = "group:255-ghana.png">
+      </FileRef>
+      <FileRef
+         location = "group:198-somalia.png">
+      </FileRef>
+      <FileRef
+         location = "group:059-saudi-arabia.png">
+      </FileRef>
+      <FileRef
+         location = "group:145-fiji.png">
+      </FileRef>
+      <FileRef
+         location = "group:218-liberia.png">
+      </FileRef>
+      <FileRef
+         location = "group:139-st-lucia.png">
+      </FileRef>
+      <FileRef
+         location = "group:166-sint-eustatius.png">
+      </FileRef>
+      <FileRef
+         location = "group:213-st-barts.png">
+      </FileRef>
+      <FileRef
+         location = "group:032-latvia.png">
+      </FileRef>
+      <FileRef
+         location = "group:107-brunei.png">
+      </FileRef>
+      <FileRef
+         location = "group:193-togo.png">
+      </FileRef>
+      <FileRef
+         location = "group:259-senegal.png">
+      </FileRef>
+      <FileRef
+         location = "group:056-malaysia.png">
+      </FileRef>
+      <FileRef
+         location = "group:133-bolivia.png">
+      </FileRef>
+      <FileRef
+         location = "group:075-south-africa.png">
+      </FileRef>
+      <FileRef
+         location = "group:187-falkland-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:080-taiwan.png">
+      </FileRef>
+      <FileRef
+         location = "group:025-lithuania.png">
+      </FileRef>
+      <FileRef
+         location = "group:254-jersey.png">
+      </FileRef>
+      <FileRef
+         location = "group:134-croatia.png">
+      </FileRef>
+      <FileRef
+         location = "group:151-kosovo.png">
+      </FileRef>
+      <FileRef
+         location = "group:099-aruba.png">
+      </FileRef>
+      <FileRef
+         location = "group:183-greenland.png">
+      </FileRef>
+      <FileRef
+         location = "group:250-brazil.png">
+      </FileRef>
+      <FileRef
+         location = "group:046-united-nations.png">
+      </FileRef>
+      <FileRef
+         location = "group:088-corsica.png">
+      </FileRef>
+      <FileRef
+         location = "group:157-transnistria.png">
+      </FileRef>
+      <FileRef
+         location = "group:130-australia.png">
+      </FileRef>
+      <FileRef
+         location = "group:237-swaziland.png">
+      </FileRef>
+      <FileRef
+         location = "group:112-british-virgin-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:235-trinidad-and-tobago.png">
+      </FileRef>
+      <FileRef
+         location = "group:037-north-korea.png">
+      </FileRef>
+      <FileRef
+         location = "group:225-libya.png">
+      </FileRef>
+      <FileRef
+         location = "group:211-djibouti.png">
+      </FileRef>
+      <FileRef
+         location = "group:047-panama.png">
+      </FileRef>
+      <FileRef
+         location = "group:126-algeria.png">
+      </FileRef>
+      <FileRef
+         location = "group:177-mauritania.png">
+      </FileRef>
+      <FileRef
+         location = "group:013-tunisia.png">
+      </FileRef>
+      <FileRef
+         location = "group:040-guatemala.png">
+      </FileRef>
+      <FileRef
+         location = "group:102-andorra.png">
+      </FileRef>
+      <FileRef
+         location = "group:180-guernsey.png">
+      </FileRef>
+      <FileRef
+         location = "group:243-rwanda.png">
+      </FileRef>
+      <FileRef
+         location = "group:081-cook-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:024-hawaii.png">
+      </FileRef>
+      <FileRef
+         location = "group:039-syria.png">
+      </FileRef>
+      <FileRef
+         location = "group:057-venezuela.png">
+      </FileRef>
+      <FileRef
+         location = "group:181-guam.png">
+      </FileRef>
+      <FileRef
+         location = "group:008-lebanon.png">
+      </FileRef>
+      <FileRef
+         location = "group:041-iceland.png">
+      </FileRef>
+      <FileRef
+         location = "group:258-democratic-republic-of-congo.png">
+      </FileRef>
+      <FileRef
+         location = "group:201-sao-tome-and-principe.png">
+      </FileRef>
+      <FileRef
+         location = "group:034-kazakhstan.png">
+      </FileRef>
+      <FileRef
+         location = "group:241-equatorial-guinea.png">
+      </FileRef>
+      <FileRef
+         location = "group:206-canada.png">
+      </FileRef>
+      <FileRef
+         location = "group:011-italy.png">
+      </FileRef>
+      <FileRef
+         location = "group:154-guinea.png">
+      </FileRef>
+      <FileRef
+         location = "group:005-puerto-rico.png">
+      </FileRef>
+      <FileRef
+         location = "group:079-egypt.png">
+      </FileRef>
+      <FileRef
+         location = "group:017-wales.png">
+      </FileRef>
+      <FileRef
+         location = "group:078-indonesia.png">
+      </FileRef>
+      <FileRef
+         location = "group:148-vanuatu.png">
+      </FileRef>
+      <FileRef
+         location = "group:222-sahrawi-arab-democratic-republic.png">
+      </FileRef>
+      <FileRef
+         location = "group:200-sardinia.png">
+      </FileRef>
+      <FileRef
+         location = "group:179-kiribati.png">
+      </FileRef>
+      <FileRef
+         location = "group:098-benin.png">
+      </FileRef>
+      <FileRef
+         location = "group:055-south-korea.png">
+      </FileRef>
+      <FileRef
+         location = "group:147-dominica.png">
+      </FileRef>
+      <FileRef
+         location = "group:144-macao.png">
+      </FileRef>
+      <FileRef
+         location = "group:150-seychelles.png">
+      </FileRef>
+      <FileRef
+         location = "group:031-pakistan.png">
+      </FileRef>
+      <FileRef
+         location = "group:038-uruguay.png">
+      </FileRef>
+      <FileRef
+         location = "group:163-solomon-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:186-gabon.png">
+      </FileRef>
+      <FileRef
+         location = "group:171-ossetia.png">
+      </FileRef>
+      <FileRef
+         location = "group:033-japan.png">
+      </FileRef>
+      <FileRef
+         location = "group:245-ivory-coast.png">
+      </FileRef>
+      <FileRef
+         location = "group:115-belize.png">
+      </FileRef>
+      <FileRef
+         location = "group:015-el-salvador.png">
+      </FileRef>
+      <FileRef
+         location = "group:113-bosnia-and-herzegovina.png">
+      </FileRef>
+      <FileRef
+         location = "group:140-rapa-nui.png">
+      </FileRef>
+      <FileRef
+         location = "group:053-hungary.png">
+      </FileRef>
+      <FileRef
+         location = "group:153-united-states-of-america.png">
+      </FileRef>
+      <FileRef
+         location = "group:135-bulgaria.png">
+      </FileRef>
+      <FileRef
+         location = "group:093-british-indian-ocean-territory.png">
+      </FileRef>
+      <FileRef
+         location = "group:217-india.png">
+      </FileRef>
+      <FileRef
+         location = "group:119-turkey.png">
+      </FileRef>
+      <FileRef
+         location = "group:214-san-marino.png">
+      </FileRef>
+      <FileRef
+         location = "group:167-saint-kitts-and-nevis.png">
+      </FileRef>
+      <FileRef
+         location = "group:012-malta.png">
+      </FileRef>
+      <FileRef
+         location = "group:174-portugal.png">
+      </FileRef>
+      <FileRef
+         location = "group:170-palestine.png">
+      </FileRef>
+      <FileRef
+         location = "group:223-republic-of-macedonia.png">
+      </FileRef>
+      <FileRef
+         location = "group:152-england.png">
+      </FileRef>
+      <FileRef
+         location = "group:244-lesotho.png">
+      </FileRef>
+      <FileRef
+         location = "group:073-sweden.png">
+      </FileRef>
+      <FileRef
+         location = "group:121-armenia.png">
+      </FileRef>
+      <FileRef
+         location = "group:138-tonga.png">
+      </FileRef>
+      <FileRef
+         location = "group:085-american-samoa.png">
+      </FileRef>
+      <FileRef
+         location = "group:178-kuwait.png">
+      </FileRef>
+      <FileRef
+         location = "group:016-zambia.png">
+      </FileRef>
+      <FileRef
+         location = "group:202-norfolk-island.png">
+      </FileRef>
+      <FileRef
+         location = "group:173-nauru.png">
+      </FileRef>
+      <FileRef
+         location = "group:014-nicaragua.png">
+      </FileRef>
+      <FileRef
+         location = "group:236-tajikistan.png">
+      </FileRef>
+      <FileRef
+         location = "group:155-orkney-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:023-luxembourg.png">
+      </FileRef>
+      <FileRef
+         location = "group:076-philippines.png">
+      </FileRef>
+      <FileRef
+         location = "group:160-st-vincent-and-the-grenadines.png">
+      </FileRef>
+      <FileRef
+         location = "group:128-bangladesh.png">
+      </FileRef>
+      <FileRef
+         location = "group:106-cameroon.png">
+      </FileRef>
+      <FileRef
+         location = "group:252-malawi.png">
+      </FileRef>
+      <FileRef
+         location = "group:242-zimbabwe.png">
+      </FileRef>
+      <FileRef
+         location = "group:029-kenya.png">
+      </FileRef>
+      <FileRef
+         location = "group:049-ecuador.png">
+      </FileRef>
+      <FileRef
+         location = "group:226-east-timor.png">
+      </FileRef>
+      <FileRef
+         location = "group:091-central-african-republic.png">
+      </FileRef>
+      <FileRef
+         location = "group:234-french-polynesia.png">
+      </FileRef>
+      <FileRef
+         location = "group:164-vietnam.png">
+      </FileRef>
+      <FileRef
+         location = "group:227-tibet.png">
+      </FileRef>
+      <FileRef
+         location = "group:026-jamaica.png">
+      </FileRef>
+      <FileRef
+         location = "group:118-burkina-faso.png">
+      </FileRef>
+      <FileRef
+         location = "group:122-afghanistan.png">
+      </FileRef>
+      <FileRef
+         location = "group:240-republic-of-the-congo.png">
+      </FileRef>
+      <FileRef
+         location = "group:203-niger.png">
+      </FileRef>
+      <FileRef
+         location = "group:123-british-columbia.png">
+      </FileRef>
+      <FileRef
+         location = "group:216-liechtenstein.png">
+      </FileRef>
+      <FileRef
+         location = "group:246-isle-of-man.png">
+      </FileRef>
+      <FileRef
+         location = "group:002-oman.png">
+      </FileRef>
+      <FileRef
+         location = "group:124-angola.png">
+      </FileRef>
+      <FileRef
+         location = "group:229-papua-new-guinea.png">
+      </FileRef>
+      <FileRef
+         location = "group:209-guinea-bissau.png">
+      </FileRef>
+      <FileRef
+         location = "group:089-canary-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:061-czech-republic.png">
+      </FileRef>
+      <FileRef
+         location = "group:067-hong-kong.png">
+      </FileRef>
+      <FileRef
+         location = "group:256-georgia.png">
+      </FileRef>
+      <FileRef
+         location = "group:082-cocos-island.png">
+      </FileRef>
+      <FileRef
+         location = "group:247-haiti.png">
+      </FileRef>
+      <FileRef
+         location = "group:052-finland.png">
+      </FileRef>
+      <FileRef
+         location = "group:105-aland-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:083-christmas-island.png">
+      </FileRef>
+      <FileRef
+         location = "group:094-bhutan.png">
+      </FileRef>
+      <FileRef
+         location = "group:004-slovenia.png">
+      </FileRef>
+      <FileRef
+         location = "group:030-cyprus.png">
+      </FileRef>
+      <FileRef
+         location = "group:007-iraq.png">
+      </FileRef>
+      <FileRef
+         location = "group:230-montenegro.png">
+      </FileRef>
+      <FileRef
+         location = "group:137-martinique.png">
+      </FileRef>
+      <FileRef
+         location = "group:062-colombia.png">
+      </FileRef>
+      <FileRef
+         location = "group:182-grenada.png">
+      </FileRef>
+      <FileRef
+         location = "group:196-azores-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:176-melilla.png">
+      </FileRef>
+      <FileRef
+         location = "group:120-basque-country.png">
+      </FileRef>
+      <FileRef
+         location = "group:162-somaliland.png">
+      </FileRef>
+      <FileRef
+         location = "group:220-uzbekistn.png">
+      </FileRef>
+      <FileRef
+         location = "group:149-sierra-leone.png">
+      </FileRef>
+      <FileRef
+         location = "group:044-spain.png">
+      </FileRef>
+      <FileRef
+         location = "group:071-greece.png">
+      </FileRef>
+      <FileRef
+         location = "group:087-anguilla.png">
+      </FileRef>
+      <FileRef
+         location = "group:159-gambia.png">
+      </FileRef>
+      <FileRef
+         location = "group:189-austria.png">
+      </FileRef>
+      <FileRef
+         location = "group:095-chad.png">
+      </FileRef>
+      <FileRef
+         location = "group:204-micronesia.png">
+      </FileRef>
+      <FileRef
+         location = "group:090-comoros.png">
+      </FileRef>
+      <FileRef
+         location = "group:168-saba-island.png">
+      </FileRef>
+      <FileRef
+         location = "group:103-burundi.png">
+      </FileRef>
+      <FileRef
+         location = "group:084-ceuta.png">
+      </FileRef>
+      <FileRef
+         location = "group:051-chile.png">
+      </FileRef>
+      <FileRef
+         location = "group:069-laos.png">
+      </FileRef>
+      <FileRef
+         location = "group:108-poland.png">
+      </FileRef>
+      <FileRef
+         location = "group:129-cuba.png">
+      </FileRef>
+      <FileRef
+         location = "group:253-madagascar.png">
+      </FileRef>
+      <FileRef
+         location = "group:111-barbados.png">
+      </FileRef>
+      <FileRef
+         location = "group:228-russia.png">
+      </FileRef>
+      <FileRef
+         location = "group:019-qatar.png">
+      </FileRef>
+      <FileRef
+         location = "group:070-ireland.png">
+      </FileRef>
+      <FileRef
+         location = "group:020-namibia.png">
+      </FileRef>
+      <FileRef
+         location = "group:045-slovakia.png">
+      </FileRef>
+      <FileRef
+         location = "group:006-mozambique.png">
+      </FileRef>
+      <FileRef
+         location = "group:127-botswana.png">
+      </FileRef>
+      <FileRef
+         location = "group:233-madeira.png">
+      </FileRef>
+      <FileRef
+         location = "group:066-germany.png">
+      </FileRef>
+      <FileRef
+         location = "group:207-mali.png">
+      </FileRef>
+      <FileRef
+         location = "group:077-france.png">
+      </FileRef>
+      <FileRef
+         location = "group:175-montserrat.png">
+      </FileRef>
+      <FileRef
+         location = "group:172-northern-marianas-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:192-turkmenistan.png">
+      </FileRef>
+      <FileRef
+         location = "group:125-azerbaijan.png">
+      </FileRef>
+      <FileRef
+         location = "group:231-moldova.png">
+      </FileRef>
+      <FileRef
+         location = "group:156-turks-and-caicos.png">
+      </FileRef>
+      <FileRef
+         location = "group:262-united-kingdom.png">
+      </FileRef>
+      <FileRef
+         location = "group:117-albania.png">
+      </FileRef>
+      <FileRef
+         location = "group:018-dominican-republic.png">
+      </FileRef>
+      <FileRef
+         location = "group:063-iran.png">
+      </FileRef>
+      <FileRef
+         location = "group:232-maldives.png">
+      </FileRef>
+      <FileRef
+         location = "group:248-samoa.png">
+      </FileRef>
+      <FileRef
+         location = "group:143-niue.png">
+      </FileRef>
+      <FileRef
+         location = "group:257-estonia.png">
+      </FileRef>
+      <FileRef
+         location = "group:042-jordan.png">
+      </FileRef>
+      <FileRef
+         location = "group:169-pitcairn-islands.png">
+      </FileRef>
+      <FileRef
+         location = "group:036-scotland.png">
+      </FileRef>
+      <FileRef
+         location = "group:096-cape-verde.png">
+      </FileRef>
+      <FileRef
+         location = "group:028-myanmar.png">
+      </FileRef>
+      <FileRef
+         location = "group:185-gibraltar.png">
+      </FileRef>
+      <FileRef
+         location = "group:009-uganda.png">
+      </FileRef>
+      <FileRef
+         location = "group:249-nepal.png">
+      </FileRef>
+      <FileRef
+         location = "group:191-tubalu.png">
+      </FileRef>
+      <FileRef
+         location = "group:043-monaco.png">
+      </FileRef>
+      <FileRef
+         location = "group:251-mongolia.png">
+      </FileRef>
+      <FileRef
+         location = "group:238-sri-lanka.png">
+      </FileRef>
+   </Group>
    <FileRef
-      location = "self:Project2.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

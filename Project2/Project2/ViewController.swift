@@ -35,51 +35,52 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         fetchImages()
         askQuestion()
-        
-        button1.layer.borderWidth = 1
-        button2.layer.borderWidth = 1
-        button3.layer.borderWidth = 1
-        
-        button1.layer.borderColor = UIColor.lightGray.cgColor
-        button2.layer.borderColor = UIColor.lightGray.cgColor
-        button3.layer.borderColor = UIColor.lightGray.cgColor
-       
     }
 
     func askQuestion() {
         countGames += 1
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
-        title = countries[correctAnswer].uppercased()
+        let country = countries[correctAnswer].dropLast(4).dropFirst(4)
+        title = "\(country.uppercased())"
         scoreLabel.text = "Score: \(score)"
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
+    
     }
     @IBAction func buttonTapped(_ sender: UIButton) {
-        var titleAlert : String
+        var titleAlert: String?
+        var messageAlert: String?
         if sender.tag == correctAnswer {
             score += 1
-            titleAlert = "Correct"
+            self.askQuestion()
         } else {
             score -= 1
-            titleAlert = "Wrong! That’s the flag of \(countries[sender.tag])"
+            let country = countries[sender.tag].dropLast(4).dropFirst(4)
+            titleAlert = "Wrong! That’s the flag of \(country.capitalized)"
+            let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(action)
+            present(alert, animated: true) {
+                self.askQuestion()
+            }
         }
         
-        var messageAlert = "Your score \(score)"
         if countGames == 10 {
             messageAlert = "Your score for 10 games: \(score)"
             score = 0
             countGames = 0
+            let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(action)
+            present(alert, animated: true) {
+                self.askQuestion()
+            }
         }
         
-        let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default)
-        alert.addAction(action)
-        present(alert, animated: true) {
-            self.askQuestion()
-        }
+        
     }
 }
 
