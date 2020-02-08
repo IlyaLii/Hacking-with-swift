@@ -32,6 +32,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(picker, animated: true)
     }
     
+    @objc func image(_ image: UIImage, error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            let alert = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
         
@@ -56,7 +64,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         guard let actionTitle = action.title else { return }
-        
+        title = actionTitle
         currentFilter = CIFilter(name: actionTitle)
         
         let beginImage = CIImage(image: currentImage)
@@ -75,6 +83,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         applyProcessing()
     }
     
+    
+    
     @IBAction func changeIntensity(_ sender: Any) {
         applyProcessing()
     }
@@ -92,7 +102,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(ac, animated: true)
     }
     @IBAction func save(_ sender: Any) {
-        
+        guard let image = imageView.image else { return }
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:error:contextInfo:)), nil)
     }
 }
 
