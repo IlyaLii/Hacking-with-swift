@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var flagLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -42,8 +42,8 @@ class ViewController: UIViewController {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         let country = countries[correctAnswer].dropLast(4).dropFirst(4)
-        title = "\(country.uppercased())"
-        scoreLabel.text = "Score: \(score)"
+        flagLabel.text = "\(country.uppercased())"
+        title = "Score: \(score)"
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
@@ -68,16 +68,14 @@ class ViewController: UIViewController {
             }
         }
         
-        if countGames == 10 {
-            messageAlert = "Your score for 10 games: \(score)"
+        if countGames >= 1 {
+            let endGameView = EndGameView(score: score)
+            endGameView.center = view.center
+            view.addSubview(endGameView)
+            self.askQuestion()
+            
             score = 0
             countGames = 0
-            let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default)
-            alert.addAction(action)
-            present(alert, animated: true) {
-                self.askQuestion()
-            }
         }
         
         

@@ -47,8 +47,8 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqt-GM-iR0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clJ-xH-yQq">
-                                <rect key="frame" x="174" y="108" width="66.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clJ-xH-yQq">
+                                <rect key="frame" x="182.5" y="108" width="49.5" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49.5" id="4Fo-yW-5jq"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0076048504561185837" green="0.041226811707019806" blue="0.24396219849586487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rjH-cO-Ndb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3eL-iS-fgj"/>
                             <constraint firstItem="uv8-JO-am6" firstAttribute="width" secondItem="1Vs-g4-pBx" secondAttribute="width" id="4rc-gQ-eLB"/>
@@ -80,7 +80,7 @@
                         <outlet property="button1" destination="1Vs-g4-pBx" id="Xor-Rv-FkM"/>
                         <outlet property="button2" destination="uv8-JO-am6" id="vsp-ym-shf"/>
                         <outlet property="button3" destination="rjH-cO-Ndb" id="fnm-AF-J0S"/>
-                        <outlet property="scoreLabel" destination="clJ-xH-yQq" id="5fX-BU-8ia"/>
+                        <outlet property="flagLabel" destination="clJ-xH-yQq" id="pAV-bH-zEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.3215048611164093" green="0.34437954425811768" blue="0.43874624371528625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>

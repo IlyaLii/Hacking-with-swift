@@ -17,10 +17,22 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         let defaults = UserDefaults.standard
         
         if let savedPeople = defaults.object(forKey: "people") as? Data {
-            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                let decodedPeople = try jsonDecoder.decode([Person].self, from: savedPeople)
                 people = decodedPeople
+            } catch let error as NSError {
+                print("Failed to decode data. Error: \(error) \(error.userInfo)")
             }
         }
+        
+        /* NSCodable */
+        //        if let savedPeople = defaults.object(forKey: "people") as? Data {
+        //            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
+        //                people = decodedPeople
+        //            }
+        //        }
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
         
@@ -94,10 +106,22 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     func save() {
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+        let jsonEncoder = JSONEncoder()
+        
+        if let savedData = try? jsonEncoder.encode(people) {
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: "people")
+        } else {
+            print("Failed to save data.")
         }
     }
+    
+    /* NSCodable */
+    //    func save() {
+    //        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+    //            let defaults = UserDefaults.standard
+    //            defaults.set(savedData, forKey: "people")
+    //        }
+    //    }
 }
 
