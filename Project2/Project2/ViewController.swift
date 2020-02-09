@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var flagLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         fetchImages()
         askQuestion()
     }
-
+    
     func askQuestion() {
         countGames += 1
         countries.shuffle()
@@ -48,9 +48,18 @@ class ViewController: UIViewController {
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
-    
+        
+        
     }
     @IBAction func buttonTapped(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+            sender.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
+        })
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+            sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
         var titleAlert: String?
         var messageAlert: String?
         if sender.tag == correctAnswer {
@@ -68,7 +77,7 @@ class ViewController: UIViewController {
             }
         }
         
-        if countGames >= 1 {
+        if countGames >= 10 {
             let endGameView = EndGameView(score: score)
             endGameView.center = view.center
             view.addSubview(endGameView)
@@ -77,8 +86,6 @@ class ViewController: UIViewController {
             score = 0
             countGames = 0
         }
-        
-        
     }
 }
 

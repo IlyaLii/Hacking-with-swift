@@ -16,15 +16,24 @@ class EndGameView: UIView {
     
     init(score: Int) {
         super.init(frame: CGRect(x: 0, y: 0, width: 256, height: 216))
-        self.backgroundColor = .white
+        self.backgroundColor = .tertiarySystemBackground
         self.layer.cornerRadius = 25.6
         self.layer.borderWidth = 4
         self.layer.borderColor = UIColor(red: 82, green: 88, blue: 112, alpha: 0).cgColor
         
         let defaults = UserDefaults.standard
+        var highScore = defaults.integer(forKey: "highScore")
+        
+        if highScore < score {
+            highScore = score
+            defaults.set(highScore, forKey: "highScore")
+        }
+        
+        
         
         highScoreLabel = UILabel()
-        highScoreLabel.text = "Highscore: \(defaults.integer(forKey: "highScore"))"
+        highScoreLabel.text = "Highscore: \(highScore)"
+        highScoreLabel.textColor = .white
         highScoreLabel.textAlignment = .center
         highScoreLabel.font = UIFont.systemFont(ofSize: 24)
         highScoreLabel.sizeToFit()
@@ -33,6 +42,7 @@ class EndGameView: UIView {
         
         scoreLabel = UILabel()
         scoreLabel.text = "Score: \(score)"
+        scoreLabel.textColor = .white
         scoreLabel.textAlignment = .center
         scoreLabel.font = UIFont.systemFont(ofSize: 24)
         scoreLabel.sizeToFit()
@@ -41,8 +51,10 @@ class EndGameView: UIView {
         
         newGameButton = UIButton()
         newGameButton.layer.borderWidth = 1
+        newGameButton.layer.borderColor = UIColor.white.cgColor
+        newGameButton.layer.cornerRadius = 20
         newGameButton.setTitle("New game", for: .normal)
-        newGameButton.setTitleColor(.black, for: .normal)
+        newGameButton.setTitleColor(.white, for: .normal)
         newGameButton.addTarget(self, action: #selector(newGameTapped), for: .touchUpInside)
         newGameButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(newGameButton)

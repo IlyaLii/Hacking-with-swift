@@ -53,11 +53,11 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49.5" id="4Fo-yW-5jq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.050226934254169464" green="0.016973797231912613" blue="0.051974043250083923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0076048504561185837" green="0.041226811707019806" blue="0.24396219849586487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93186837434768677" green="0.87452167272567749" blue="0.70440405607223511" alpha="0.8866652397260274" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rjH-cO-Ndb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3eL-iS-fgj"/>
                             <constraint firstItem="uv8-JO-am6" firstAttribute="width" secondItem="1Vs-g4-pBx" secondAttribute="width" id="4rc-gQ-eLB"/>
@@ -99,7 +99,7 @@
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.3215048611164093" green="0.34437954425811768" blue="0.43874624371528625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
