@@ -16,7 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     
     var countries = [String]()
-    var score = 0
+    var score = 0 {
+        didSet {
+            self.title = "Score: \(self.score)"
+        }
+    }
     var correctAnswer = 0
     var countGames = 0
     
@@ -35,8 +39,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         fetchImages()
         askQuestion()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(newGame))
     }
     
+    @objc func newGame() {
+        askQuestion()
+        score = 0
+        countGames = 0
+    }
     func askQuestion() {
         countGames += 1
         countries.shuffle()
@@ -48,16 +58,14 @@ class ViewController: UIViewController {
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
-        
-        
     }
     @IBAction func buttonTapped(_ sender: UIButton) {
         
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
-            sender.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
+            sender.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         })
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
             sender.transform = CGAffineTransform(scaleX: 1, y: 1)
         })
         var titleAlert: String?
@@ -66,7 +74,6 @@ class ViewController: UIViewController {
             score += 1
             self.askQuestion()
         } else {
-            score -= 1
             let country = countries[sender.tag].dropLast(4).dropFirst(4)
             titleAlert = "Wrong! That’s the flag of \(country.capitalized)"
             let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)

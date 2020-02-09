@@ -33,16 +33,26 @@ class EndGameView: UIView {
         
         highScoreLabel = UILabel()
         highScoreLabel.text = "Highscore: \(highScore)"
-        highScoreLabel.textColor = .white
+        highScoreLabel.textColor = .black
         highScoreLabel.textAlignment = .center
         highScoreLabel.font = UIFont.systemFont(ofSize: 24)
         highScoreLabel.sizeToFit()
         highScoreLabel.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(highScoreLabel)
         
+        var text: String?
+        if score == 10 {
+            text = "parxom krut"
+        } else {
+            text = "parxom lox"
+        }
         scoreLabel = UILabel()
-        scoreLabel.text = "Score: \(score)"
-        scoreLabel.textColor = .white
+        scoreLabel.text = """
+        \(text!)
+        Score: \(score)
+        """
+        scoreLabel.numberOfLines = 0
+        scoreLabel.textColor = .black
         scoreLabel.textAlignment = .center
         scoreLabel.font = UIFont.systemFont(ofSize: 24)
         scoreLabel.sizeToFit()
@@ -51,10 +61,10 @@ class EndGameView: UIView {
         
         newGameButton = UIButton()
         newGameButton.layer.borderWidth = 1
-        newGameButton.layer.borderColor = UIColor.white.cgColor
+        newGameButton.layer.borderColor = UIColor.black.cgColor
         newGameButton.layer.cornerRadius = 20
         newGameButton.setTitle("New game", for: .normal)
-        newGameButton.setTitleColor(.white, for: .normal)
+        newGameButton.setTitleColor(.black, for: .normal)
         newGameButton.addTarget(self, action: #selector(newGameTapped), for: .touchUpInside)
         newGameButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(newGameButton)
