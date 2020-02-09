@@ -16,11 +16,16 @@ class EndGameView: UIView {
     
     init(score: Int) {
         super.init(frame: CGRect(x: 0, y: 0, width: 256, height: 216))
-        self.backgroundColor = .tertiarySystemBackground
         self.layer.cornerRadius = 25.6
         self.layer.borderWidth = 4
-        self.layer.borderColor = UIColor(red: 82, green: 88, blue: 112, alpha: 0).cgColor
-        
+        let myDynamicColor = UIColor { (traitCollection: UITraitCollection) -> UIColor in
+            if traitCollection.userInterfaceStyle == .dark {
+                return UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+            } else {
+                return UIColor(red: 220, green: 220, blue: 220, alpha: 1)
+            }
+        }
+        self.backgroundColor = myDynamicColor
         let defaults = UserDefaults.standard
         var highScore = defaults.integer(forKey: "highScore")
         
