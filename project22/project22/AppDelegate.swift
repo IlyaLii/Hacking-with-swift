@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Project2
+//  project22
 //
-//  Created by Li on 1/31/20.
+//  Created by Li on 2/10/20.
 //  Copyright © 2020 Li. All rights reserved.
 //
 
@@ -12,32 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    func registerLocal() {
-      UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
-        (granted, error) in
-        print("Permission granted: \(granted)")
-      }
-    }
-    
-    func sheduleLocal() {
-        let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Go back =))"
-        content.body = "Can you beat your record?"
-        content.categoryIdentifier = "alarm"
-        content.sound = .default
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 86400, repeats: true)
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request, withCompletionHandler: nil)
-    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        registerLocal()
-        sheduleLocal()
+        // Override point for customization after application launch.
         return true
     }
 
